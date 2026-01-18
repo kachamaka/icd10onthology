@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns="http://example.org/icd10-ontology#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#hasCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Category"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/icd10-ontology#hasPart"/>
+    <owl:inverseOf rdf:resource="http://example.org/icd10-ontology#codeOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#OrganSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Category_A00">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Category"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Category A00 - Cholera</preferredLabel>
+    <hasCode rdf:resource="http://example.org/icd10-ontology#A00_0"/>
+    <hasCode rdf:resource="http://example.org/icd10-ontology#A00_1"/>
+    <hasCode rdf:resource="http://example.org/icd10-ontology#A00_9"/>
+    <categoryOf rdf:resource="http://example.org/icd10-ontology#Block_A00_A09"/>
+    <affectsOrganSystem rdf:resource="http://example.org/icd10-ontology#DigestiveSystem"/>
+    <hasEtiology rdf:resource="http://example.org/icd10-ontology#InfectiousCause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Category">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#Restriction_hasCode_Code"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#DisjointCore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:resource="http://example.org/icd10-ontology#disjointCoreList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Restriction_hasCategory_Category">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/icd10-ontology#hasCategory"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/icd10-ontology#Category"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#rangeStart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#hasEtiology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Etiology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#hasBlock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Chapter"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/icd10-ontology#hasPart"/>
+    <owl:inverseOf rdf:resource="http://example.org/icd10-ontology#blockOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Chapter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#Restriction_hasBlock_Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Block_A00_A09">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00-A09</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block A00-A09 - Intestinal infectious diseases</preferredLabel>
+    <rangeStart rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00</rangeStart>
+    <rangeEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A09</rangeEnd>
+    <hasCategory rdf:resource="http://example.org/icd10-ontology#Category_A00"/>
+    <blockOf rdf:resource="http://example.org/icd10-ontology#Chapter_I"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#A00_9">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00.9</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cholera, unspecified</preferredLabel>
+    <codeOf rdf:resource="http://example.org/icd10-ontology#Category_A00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <owl:inverseOf rdf:resource="http://example.org/icd10-ontology#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Block">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#Restriction_hasCategory_Category"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#codeValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#disjointCoreList">
+    <rdf:first rdf:resource="http://example.org/icd10-ontology#Chapter"/>
+    <rdf:rest rdf:nodeID="N74717a0205014482bbdba89a926907a1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#A00_1">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00.1</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cholera due to Vibrio cholerae 01, biovar eltor</preferredLabel>
+    <codeOf rdf:resource="http://example.org/icd10-ontology#Category_A00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#DigestiveSystem">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#OrganSystem"/>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digestive system (example)</preferredLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#codeOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Category"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd03ea4ebb9c04ee8bb02073bf25221d0">
+    <rdf:first rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#rangeEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">ICD-10 Structural Ontology (minimal)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#descriptionText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#ICD10Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#hasCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Category"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/icd10-ontology#hasPart"/>
+    <owl:inverseOf rdf:resource="http://example.org/icd10-ontology#categoryOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#A00_0">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Code"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A00.0</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cholera due to Vibrio cholerae 01, biovar cholerae</preferredLabel>
+    <codeOf rdf:resource="http://example.org/icd10-ontology#Category_A00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Chapter_I">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Chapter"/>
+    <codeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</codeValue>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chapter I - Certain infectious and parasitic diseases</preferredLabel>
+    <hasBlock rdf:resource="http://example.org/icd10-ontology#Block_A00_A09"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#categoryOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Category"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74717a0205014482bbdba89a926907a1">
+    <rdf:first rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdf:rest rdf:nodeID="Ncba325ade2f540219354b94450f751c0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Etiology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Restriction_hasBlock_Block">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/icd10-ontology#hasBlock"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/icd10-ontology#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#affectsOrganSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#OrganSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#Restriction_hasCode_Code">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/icd10-ontology#hasCode"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/icd10-ontology#Code"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#InfectiousCause">
+    <rdf:type rdf:resource="http://example.org/icd10-ontology#Etiology"/>
+    <preferredLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infectious cause (example)</preferredLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#preferredLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#ICD10Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/icd10-ontology#blockOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/icd10-ontology#Block"/>
+    <rdfs:range rdf:resource="http://example.org/icd10-ontology#Chapter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncba325ade2f540219354b94450f751c0">
+    <rdf:first rdf:resource="http://example.org/icd10-ontology#Category"/>
+    <rdf:rest rdf:nodeID="Nd03ea4ebb9c04ee8bb02073bf25221d0"/>
+  </rdf:Description>
+</rdf:RDF>

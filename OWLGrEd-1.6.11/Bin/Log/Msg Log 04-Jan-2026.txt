@@ -1,0 +1,50 @@
+
+
+12:20:15  ----------------------------------------------------------------------------------
+----------- Opening project "C:\Users\kachamaka\Desktop\OWLGrEd-1.6.11\Projects\sample"...
+
+
+----------- LoadData: Finished loading.
+
+CommitSaveTransaction
+
+DataModificationNum=11755
+
+DataModificationNum=0
+
+12:22:27  ----------------------------------------------------------------------------------
+----------- Project closed normally: "(null)"
+
+
+12:38:07  ----------------------------------------------------------------------------------
+----------- Opening project "C:\Users\kachamaka\Desktop\OWLGrEd-1.6.11\Projects\sample"...
+
+
+----------- LoadData: Finished loading.
+
+Can't add link "(null) form (null)". It already exists.
+
+CommitSaveTransaction
+
+DataModificationNum=7540
+
+DataModificationNum=0
+
+12:38:33  ----------------------------------------------------------------------------------
+----------- Project closed normally: "(null)"
+
+
+12:38:33  ----------------------------------------------------------------------------------
+----------- Opening project "C:\Users\kachamaka\Desktop\OWLGrEd-1.6.11\Projects\sample"...
+
+
+----------- LoadData: Finished loading.
+
+CommitSaveTransaction
+
+DataModificationNum=6263
+
+DataModificationNum=0
+
+12:39:10  ----------------------------------------------------------------------------------
+----------- Project closed normally: "(null)"
